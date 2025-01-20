@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".TabViewActivity">
+    tools:context=".activities.TabViewActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"

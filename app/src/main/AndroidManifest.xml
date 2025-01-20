@@ -13,13 +13,13 @@
         android:theme="@style/Theme.TestTabActivity"
         tools:targetApi="31">
         <activity
-            android:name=".LeftMenuActivity"
+            android:name=".activities.LeftMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".BottomViewActivity"
+            android:name=".activities.BottomViewActivity"
             android:exported="false" />
         <activity
-            android:name=".TabViewActivity"
+            android:name=".activities.TabViewActivity"
             android:exported="true"
             android:label="@string/title_activity_tab_view"
             android:theme="@style/Theme.TestTabActivity.NoActionBar">

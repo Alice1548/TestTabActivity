@@ -1,4 +1,4 @@
-package scisrc.mobiledev.testtabactivity
+package scisrc.mobiledev.testtabactivity.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.snackbar.Snackbar
+import scisrc.mobiledev.testtabactivity.activities.BottomViewActivity
+import scisrc.mobiledev.testtabactivity.activities.LeftMenuActivity
+import scisrc.mobiledev.testtabactivity.activities.TabViewActivity
 import scisrc.mobiledev.testtabactivity.databinding.FragmentTab1Binding
 
 class Tab1 : Fragment() {

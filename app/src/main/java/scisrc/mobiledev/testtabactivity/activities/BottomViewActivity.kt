@@ -1,7 +1,11 @@
-package scisrc.mobiledev.testtabactivity
+package scisrc.mobiledev.testtabactivity.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import scisrc.mobiledev.testtabactivity.R
+import scisrc.mobiledev.testtabactivity.fragments.Tab1
+import scisrc.mobiledev.testtabactivity.fragments.Tab2
+import scisrc.mobiledev.testtabactivity.fragments.Tab3
 import scisrc.mobiledev.testtabactivity.databinding.ActivityBottomViewBinding
 
 class BottomViewActivity : AppCompatActivity() {

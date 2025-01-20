@@ -1,4 +1,4 @@
-package scisrc.mobiledev.testtabactivity
+package scisrc.mobiledev.testtabactivity.activities
 
 import android.graphics.Color
 import android.os.Bundle
@@ -11,6 +11,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import scisrc.mobiledev.testtabactivity.R
+import scisrc.mobiledev.testtabactivity.fragments.Tab1
+import scisrc.mobiledev.testtabactivity.fragments.Tab2
+import scisrc.mobiledev.testtabactivity.fragments.Tab3
 import scisrc.mobiledev.testtabactivity.databinding.ActivityLeftMenuBinding
 
 class LeftMenuActivity : AppCompatActivity() {
