@@ -70,6 +70,19 @@ class LeftMenuActivity : AppCompatActivity() {
         }
     }
 
+    // Handle back press to close drawer first if open
+    @Deprecated("This method has been deprecated in favor of using the\n      " +
+            "{@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.\n      " +
+            "The OnBackPressedDispatcher controls how back button events are dispatched\n      " +
+            "to one or more {@link OnBackPressedCallback} objects.")
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
     // function to prepare three dot option menu
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         for (i in 0 until menu.size()) {
