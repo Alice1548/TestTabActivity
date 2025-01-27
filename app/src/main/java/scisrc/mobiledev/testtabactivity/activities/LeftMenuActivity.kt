@@ -20,6 +20,7 @@ import scisrc.mobiledev.testtabactivity.fragments.Tab3
 import scisrc.mobiledev.testtabactivity.databinding.ActivityLeftMenuBinding
 import scisrc.mobiledev.testtabactivity.fragments.CacheExampleFragment
 import scisrc.mobiledev.testtabactivity.fragments.SettingFragment
+import scisrc.mobiledev.testtabactivity.fragments.UserListFragment
 
 class LeftMenuActivity : AppCompatActivity() {
 
@@ -69,6 +70,11 @@ class LeftMenuActivity : AppCompatActivity() {
                 R.id.nav_cache -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, CacheExampleFragment())
+                        .commit()
+                }
+                R.id.nav_user_list -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, UserListFragment())
                         .commit()
                 }
             }
