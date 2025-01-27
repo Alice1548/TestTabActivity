@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
-import scisrc.mobiledev.testtabactivity.R
 import scisrc.mobiledev.testtabactivity.adapters.PreferencesManager
 import scisrc.mobiledev.testtabactivity.databinding.FragmentSettingBinding
 
