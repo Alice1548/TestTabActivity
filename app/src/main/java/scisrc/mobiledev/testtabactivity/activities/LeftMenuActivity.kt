@@ -9,18 +9,23 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import scisrc.mobiledev.testtabactivity.R
+import scisrc.mobiledev.testtabactivity.adapters.PreferencesManager
 import scisrc.mobiledev.testtabactivity.fragments.Tab1
 import scisrc.mobiledev.testtabactivity.fragments.Tab2
 import scisrc.mobiledev.testtabactivity.fragments.Tab3
 import scisrc.mobiledev.testtabactivity.databinding.ActivityLeftMenuBinding
+import scisrc.mobiledev.testtabactivity.fragments.SettingFragment
 
 class LeftMenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLeftMenuBinding
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var preferencesManager: PreferencesManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +62,7 @@ class LeftMenuActivity : AppCompatActivity() {
                 }
                 R.id.nav_settings -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, Tab3())
+                        .replace(R.id.fragment_container, SettingFragment())
                         .commit()
                 }
             }
@@ -72,6 +77,24 @@ class LeftMenuActivity : AppCompatActivity() {
                 .commit()
             binding.navView.setCheckedItem(R.id.nav_home)
         }
+
+        // Initialize preferences manager
+        preferencesManager = PreferencesManager(this)
+
+        // Apply theme based on saved preference
+        if (preferencesManager.isDarkThemeEnabled()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        }
+
+        // Use saved username
+        val username = preferencesManager.getUsername()
+        if (username.isNotEmpty()) {
+            welcomeUser(username)
+        }
+    }
+
+    private fun welcomeUser(string: String) {
+
     }
 
     // Handle back press to close drawer first if open
